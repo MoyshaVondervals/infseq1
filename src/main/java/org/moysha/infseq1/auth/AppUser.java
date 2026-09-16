@@ -44,4 +44,8 @@ public class AppUser {
     public byte[] getPasswordHash() {
         return passwordHash;
     }
+
+    public void setPasswordHash(byte[] passwordHash) {
+        this.passwordHash = passwordHash;
+    }
 }

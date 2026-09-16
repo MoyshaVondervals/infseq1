@@ -13,7 +13,7 @@ import jakarta.persistence.Table;
 public class AuthToken {
 
     @Id
-    @Column(length = 100)
+    @Column(length = 512)
     private String token;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)

@@ -3,28 +3,29 @@ package org.moysha.infseq1.auth;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.crypto.SecretKeyFactory;
-import javax.crypto.spec.PBEKeySpec;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
-import java.security.spec.InvalidKeySpecException;
-import java.util.Base64;
+import java.nio.charset.StandardCharsets;
 import java.util.Optional;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Service
 public class AuthService {
 
-    private static final int ITERATIONS = 120_000;
-    private static final int KEY_LENGTH = 256;
-
     private final SecureRandom secureRandom = new SecureRandom();
+    private final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
     private final AppUserRepository userRepository;
     private final AuthTokenRepository tokenRepository;
+    private final JwtService jwtService;
 
-    public AuthService(AppUserRepository userRepository, AuthTokenRepository tokenRepository) {
+    public AuthService(
+            AppUserRepository userRepository,
+            AuthTokenRepository tokenRepository,
+            JwtService jwtService
+    ) {
         this.userRepository = userRepository;
         this.tokenRepository = tokenRepository;
+        this.jwtService = jwtService;
     }
 
     @Transactional
@@ -34,20 +35,20 @@ public class AuthService {
         }
 
         AppUser user = userRepository.findByUsername(username).orElse(null);
-        if (user == null || !MessageDigest.isEqual(user.getPasswordHash(), hash(password, user.getSalt()))) {
+        if (user == null || !passwordEncoder.matches(password, encodedPassword(user))) {
             return Optional.empty();
         }
 
-        byte[] tokenBytes = new byte[32];
-        secureRandom.nextBytes(tokenBytes);
-        String token = Base64.getUrlEncoder().withoutPadding().encodeToString(tokenBytes);
+        String token = jwtService.createToken(username);
         tokenRepository.save(new AuthToken(token, user));
         return Optional.of(token);
     }
 
     @Transactional(readOnly = true)
     public Optional<String> findUsername(String token) {
-        return tokenRepository.findUsernameByToken(token);
+        return jwtService.validateAndGetSubject(token)
+                .flatMap(subject -> tokenRepository.findUsernameByToken(token)
+                        .filter(subject::equals));
     }
 
     @Transactional
@@ -61,23 +62,22 @@ public class AuthService {
 
     @Transactional
     public void createUserIfMissing(String username, String password) {
-        if (userRepository.findByUsername(username).isPresent()) {
+        Optional<AppUser> existingUser = userRepository.findByUsername(username);
+        if (existingUser.isPresent()) {
+            AppUser user = existingUser.get();
+            if (!encodedPassword(user).startsWith("$2")) {
+                user.setPasswordHash(passwordEncoder.encode(password).getBytes(StandardCharsets.UTF_8));
+                userRepository.save(user);
+            }
             return;
         }
         byte[] salt = new byte[16];
         secureRandom.nextBytes(salt);
-        userRepository.save(new AppUser(username, salt, hash(password, salt)));
+        byte[] passwordHash = passwordEncoder.encode(password).getBytes(StandardCharsets.UTF_8);
+        userRepository.save(new AppUser(username, salt, passwordHash));
     }
 
-    private byte[] hash(String password, byte[] salt) {
-        PBEKeySpec spec = new PBEKeySpec(password.toCharArray(), salt, ITERATIONS, KEY_LENGTH);
-        try {
-            return SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256").generateSecret(spec).getEncoded();
-        } catch (NoSuchAlgorithmException | InvalidKeySpecException exception) {
-            throw new IllegalStateException("Cannot hash password", exception);
-        } finally {
-            spec.clearPassword();
-        }
+    private String encodedPassword(AppUser user) {
+        return new String(user.getPasswordHash(), StandardCharsets.UTF_8);
     }
-
 }
