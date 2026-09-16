@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BugCollection sequence="0" release="" analysisTimestamp="1789562002814" version="4.10.4" timestamp="1789562000923">
+  <Project projectName="infseq1">
+    <Jar>/Users/moyshavondervals/IdeaProjects/infseq1/target/classes</Jar>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/4.1.1/spring-boot-starter-data-jpa-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-starter/4.1.1/spring-boot-starter-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-starter-logging/4.1.1/spring-boot-starter-logging-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/ch/qos/logback/logback-classic/1.5.38/logback-classic-1.5.38.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/ch/qos/logback/logback-core/1.5.38/logback-core-1.5.38.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.25.5/log4j-to-slf4j-2.25.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/apache/logging/log4j/log4j-api/2.25.5/log4j-api-2.25.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/slf4j/jul-to-slf4j/2.0.18/jul-to-slf4j-2.0.18.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/4.1.1/spring-boot-autoconfigure-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/jakarta/annotation/jakarta.annotation-api/3.0.0/jakarta.annotation-api-3.0.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/yaml/snakeyaml/2.6/snakeyaml-2.6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/4.1.1/spring-boot-starter-jdbc-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/com/zaxxer/HikariCP/7.0.2/HikariCP-7.0.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-data-jpa/4.1.1/spring-boot-data-jpa-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-data-commons/4.1.1/spring-boot-data-commons-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-persistence/4.1.1/spring-boot-persistence-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/data/spring-data-commons/4.1.1/spring-data-commons-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-hibernate/4.1.1/spring-boot-hibernate-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-jpa/4.1.1/spring-boot-jpa-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.2.0/jakarta.persistence-api-3.2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/hibernate/orm/hibernate-core/7.4.5.Final/hibernate-core-7.4.5.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/spring-orm/7.0.9/spring-orm-7.0.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/data/spring-data-jpa/4.1.1/spring-data-jpa-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/spring-context/7.0.9/spring-context-7.0.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/spring-aop/7.0.9/spring-aop-7.0.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/spring-tx/7.0.9/spring-tx-7.0.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/spring-beans/7.0.9/spring-beans-7.0.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/antlr/antlr4-runtime/4.13.2/antlr4-runtime-4.13.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/spring-aspects/7.0.9/spring-aspects-7.0.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/aspectj/aspectjweaver/1.9.25.1/aspectjweaver-1.9.25.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-jdbc/4.1.1/spring-boot-jdbc-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot/4.1.1/spring-boot-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-sql/4.1.1/spring-boot-sql-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-transaction/4.1.1/spring-boot-transaction-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/spring-jdbc/7.0.9/spring-jdbc-7.0.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-starter-webmvc/4.1.1/spring-boot-starter-webmvc-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-starter-jackson/4.1.1/spring-boot-starter-jackson-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-jackson/4.1.1/spring-boot-jackson-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/tools/jackson/core/jackson-databind/3.1.5/jackson-databind-3.1.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/tools/jackson/core/jackson-core/3.1.5/jackson-core-3.1.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/4.1.1/spring-boot-starter-tomcat-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat-runtime/4.1.1/spring-boot-starter-tomcat-runtime-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/11.0.24/tomcat-embed-core-11.0.24.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/11.0.24/tomcat-embed-el-11.0.24.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/11.0.24/tomcat-embed-websocket-11.0.24.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-tomcat/4.1.1/spring-boot-tomcat-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-http-converter/4.1.1/spring-boot-http-converter-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/spring-web/7.0.9/spring-web-7.0.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/io/micrometer/micrometer-observation/1.17.1/micrometer-observation-1.17.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/io/micrometer/micrometer-commons/1.17.1/micrometer-commons-1.17.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-webmvc/4.1.1/spring-boot-webmvc-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-servlet/4.1.1/spring-boot-servlet-4.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/spring-webmvc/7.0.9/spring-webmvc-7.0.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/spring-expression/7.0.9/spring-expression-7.0.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/security/spring-security-crypto/7.1.1/spring-security-crypto-7.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/com/github/spotbugs/spotbugs-annotations/4.10.4/spotbugs-annotations-4.10.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/io/jsonwebtoken/jjwt-api/0.13.0/jjwt-api-0.13.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.21/jackson-annotations-2.21.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/spring-core/7.0.9/spring-core-7.0.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/commons-logging/commons-logging/1.3.6/commons-logging-1.3.6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/jspecify/jspecify/1.0.1/jspecify-1.0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/moyshavondervals/.m2/repository/org/springframework/boot/spring-boot-web-server/4.1.1/spring-boot-web-server-4.1.1.jar</AuxClasspathEntry>
+    <SrcDir>/Users/moyshavondervals/IdeaProjects/infseq1/src/main/java</SrcDir>
+    <SrcDir>/Users/moyshavondervals/IdeaProjects/infseq1/target/generated-sources/annotations</SrcDir>
+    <WrkDir>/Users/moyshavondervals/IdeaProjects/infseq1/target</WrkDir>
+  </Project>
+  <Errors missingClasses="0" errors="0"/>
+  <FindBugsSummary num_packages="3" total_classes="16" total_size="234" clock_seconds="1.55" referenced_classes="162" vm_version="21.0.9+7-LTS-338" total_bugs="0" java_version="21.0.9" gc_seconds="0.05" alloc_mbytes="512.00" cpu_seconds="3.05" peak_mbytes="229.63" timestamp="Wed, 16 Sep 2026 15:33:20 +0300">
+    <FileStats path="org/moysha/infseq1/DataInitializer.java" size="13" bugCount="0"/>
+    <FileStats path="org/moysha/infseq1/Infseq1Application.java" size="6" bugCount="0"/>
+    <FileStats path="org/moysha/infseq1/api/DataController.java" size="25" bugCount="0"/>
+    <FileStats path="org/moysha/infseq1/api/DataItem.java" size="12" bugCount="0"/>
+    <FileStats path="org/moysha/infseq1/api/DataItemRepository.java" size="2" bugCount="0"/>
+    <FileStats path="org/moysha/infseq1/auth/AppUser.java" size="21" bugCount="0"/>
+    <FileStats path="org/moysha/infseq1/auth/AppUserRepository.java" size="2" bugCount="0"/>
+    <FileStats path="org/moysha/infseq1/auth/AuthController.java" size="34" bugCount="0"/>
+    <FileStats path="org/moysha/infseq1/auth/AuthFilter.java" size="29" bugCount="0"/>
+    <FileStats path="org/moysha/infseq1/auth/AuthService.java" size="50" bugCount="0"/>
+    <FileStats path="org/moysha/infseq1/auth/AuthToken.java" size="11" bugCount="0"/>
+    <FileStats path="org/moysha/infseq1/auth/AuthTokenRepository.java" size="2" bugCount="0"/>
+    <FileStats path="org/moysha/infseq1/auth/JwtService.java" size="27" bugCount="0"/>
+    <PackageStats package="org.moysha.infseq1" total_bugs="0" total_size="19" total_types="2">
+      <ClassStats bugs="0" size="13" interface="false" sourceFile="DataInitializer.java" class="org.moysha.infseq1.DataInitializer"/>
+      <ClassStats bugs="0" size="6" interface="false" sourceFile="Infseq1Application.java" class="org.moysha.infseq1.Infseq1Application"/>
+    </PackageStats>
+    <PackageStats package="org.moysha.infseq1.api" total_bugs="0" total_size="39" total_types="4">
+      <ClassStats bugs="0" size="14" interface="false" sourceFile="DataController.java" class="org.moysha.infseq1.api.DataController"/>
+      <ClassStats bugs="0" size="11" interface="false" sourceFile="DataController.java" class="org.moysha.infseq1.api.DataController$DataResponse"/>
+      <ClassStats bugs="0" size="12" interface="false" sourceFile="DataItem.java" class="org.moysha.infseq1.api.DataItem"/>
+      <ClassStats bugs="0" size="2" interface="true" sourceFile="DataItemRepository.java" class="org.moysha.infseq1.api.DataItemRepository"/>
+    </PackageStats>
+    <PackageStats package="org.moysha.infseq1.auth" total_bugs="0" total_size="176" total_types="10">
+      <ClassStats bugs="0" size="21" interface="false" sourceFile="AppUser.java" class="org.moysha.infseq1.auth.AppUser"/>
+      <ClassStats bugs="0" size="2" interface="true" sourceFile="AppUserRepository.java" class="org.moysha.infseq1.auth.AppUserRepository"/>
+      <ClassStats bugs="0" size="16" interface="false" sourceFile="AuthController.java" class="org.moysha.infseq1.auth.AuthController"/>
+      <ClassStats bugs="0" size="10" interface="false" sourceFile="AuthController.java" class="org.moysha.infseq1.auth.AuthController$LoginRequest"/>
+      <ClassStats bugs="0" size="8" interface="false" sourceFile="AuthController.java" class="org.moysha.infseq1.auth.AuthController$TokenResponse"/>
+      <ClassStats bugs="0" size="29" interface="false" sourceFile="AuthFilter.java" class="org.moysha.infseq1.auth.AuthFilter"/>
+      <ClassStats bugs="0" size="50" interface="false" sourceFile="AuthService.java" class="org.moysha.infseq1.auth.AuthService"/>
+      <ClassStats bugs="0" size="11" interface="false" sourceFile="AuthToken.java" class="org.moysha.infseq1.auth.AuthToken"/>
+      <ClassStats bugs="0" size="2" interface="true" sourceFile="AuthTokenRepository.java" class="org.moysha.infseq1.auth.AuthTokenRepository"/>
+      <ClassStats bugs="0" size="27" interface="false" sourceFile="JwtService.java" class="org.moysha.infseq1.auth.JwtService"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile avgMicrosecondsPerInvocation="265" totalMilliseconds="290" name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" maxMicrosecondsPerInvocation="14803" standardDeviationMicrosecondsPerInvocation="750" invocations="1091"/>
+      <ClassProfile avgMicrosecondsPerInvocation="1039" totalMilliseconds="168" name="edu.umd.cs.findbugs.detect.FieldItemSummary" maxMicrosecondsPerInvocation="75328" standardDeviationMicrosecondsPerInvocation="6579" invocations="162"/>
+      <ClassProfile avgMicrosecondsPerInvocation="78" totalMilliseconds="86" name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" maxMicrosecondsPerInvocation="4196" standardDeviationMicrosecondsPerInvocation="174" invocations="1101"/>
+      <ClassProfile avgMicrosecondsPerInvocation="320" totalMilliseconds="80" name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" maxMicrosecondsPerInvocation="49524" standardDeviationMicrosecondsPerInvocation="3153" invocations="252"/>
+      <ClassProfile avgMicrosecondsPerInvocation="379" totalMilliseconds="61" name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" maxMicrosecondsPerInvocation="8282" standardDeviationMicrosecondsPerInvocation="1042" invocations="162"/>
+      <ClassProfile avgMicrosecondsPerInvocation="287" totalMilliseconds="46" name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" maxMicrosecondsPerInvocation="23820" standardDeviationMicrosecondsPerInvocation="2279" invocations="162"/>
+      <ClassProfile avgMicrosecondsPerInvocation="154" totalMilliseconds="32" name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" maxMicrosecondsPerInvocation="3522" standardDeviationMicrosecondsPerInvocation="315" invocations="210"/>
+      <ClassProfile avgMicrosecondsPerInvocation="192" totalMilliseconds="31" name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" maxMicrosecondsPerInvocation="9797" standardDeviationMicrosecondsPerInvocation="850" invocations="162"/>
+      <ClassProfile avgMicrosecondsPerInvocation="29" totalMilliseconds="30" name="edu.umd.cs.findbugs.util.TopologicalSort" maxMicrosecondsPerInvocation="1325" standardDeviationMicrosecondsPerInvocation="71" invocations="1040"/>
+      <ClassProfile avgMicrosecondsPerInvocation="177" totalMilliseconds="28" name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" maxMicrosecondsPerInvocation="10788" standardDeviationMicrosecondsPerInvocation="878" invocations="162"/>
+      <ClassProfile avgMicrosecondsPerInvocation="131" totalMilliseconds="21" name="edu.umd.cs.findbugs.detect.CalledMethods" maxMicrosecondsPerInvocation="7845" standardDeviationMicrosecondsPerInvocation="644" invocations="162"/>
+      <ClassProfile avgMicrosecondsPerInvocation="120" totalMilliseconds="19" name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" maxMicrosecondsPerInvocation="8187" standardDeviationMicrosecondsPerInvocation="663" invocations="162"/>
+      <ClassProfile avgMicrosecondsPerInvocation="305" totalMilliseconds="18" name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" maxMicrosecondsPerInvocation="8178" standardDeviationMicrosecondsPerInvocation="1052" invocations="60"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures/>
+  <History/>
+</BugCollection>
