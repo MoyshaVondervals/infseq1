@@ -1,5 +1,6 @@
 package org.moysha.infseq1.api;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import jakarta.servlet.http.HttpServletRequest;
 import org.moysha.infseq1.auth.AuthFilter;
 import org.springframework.web.util.HtmlUtils;
@@ -31,6 +32,10 @@ public class DataController {
         return new DataResponse(username, items);
     }
 
+    @SuppressFBWarnings(
+            value = "EI_EXPOSE_REP",
+            justification = "Stream.toList returns an unmodifiable list"
+    )
     public record DataResponse(String user, List<String> items) {
     }
 }

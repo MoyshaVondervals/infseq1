@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.Optional;
 
 @Service
-public class JwtService {
+public final class JwtService {
 
     private final SecretKey signingKey;
     private final long expirationSeconds;

@@ -1,5 +1,6 @@
 package org.moysha.infseq1.auth;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -23,6 +24,7 @@ public class AuthToken {
     protected AuthToken() {
     }
 
+    @SuppressFBWarnings(value = "EI_EXPOSE_REP2", justification = "JPA association must reference its entity")
     public AuthToken(String token, AppUser user) {
         this.token = token;
         this.user = user;

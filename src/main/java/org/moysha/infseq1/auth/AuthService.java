@@ -5,6 +5,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.security.SecureRandom;
 import java.nio.charset.StandardCharsets;
+import java.util.Objects;
 import java.util.Optional;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -66,14 +67,16 @@ public class AuthService {
         if (existingUser.isPresent()) {
             AppUser user = existingUser.get();
             if (!encodedPassword(user).startsWith("$2")) {
-                user.setPasswordHash(passwordEncoder.encode(password).getBytes(StandardCharsets.UTF_8));
+                String passwordHash = Objects.requireNonNull(passwordEncoder.encode(password));
+                user.setPasswordHash(passwordHash.getBytes(StandardCharsets.UTF_8));
                 userRepository.save(user);
             }
             return;
         }
         byte[] salt = new byte[16];
         secureRandom.nextBytes(salt);
-        byte[] passwordHash = passwordEncoder.encode(password).getBytes(StandardCharsets.UTF_8);
+        byte[] passwordHash = Objects.requireNonNull(passwordEncoder.encode(password))
+                .getBytes(StandardCharsets.UTF_8);
         userRepository.save(new AppUser(username, salt, passwordHash));
     }
 

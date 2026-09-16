@@ -1,0 +1,68 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: infseq
+          POSTGRES_USER: infseq
+          POSTGRES_PASSWORD: infseq
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd="pg_isready -U infseq -d infseq"
+          --health-interval=5s
+          --health-timeout=3s
+          --health-retries=10
+
+    env:
+      DB_URL: jdbc:postgresql://localhost:5432/infseq
+      DB_USERNAME: infseq
+      DB_PASSWORD: infseq
+      JWT_SECRET: ${{ secrets.JWT_SECRET }}
+      NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+
+      - name: Prepare JWT secret
+        shell: bash
+        run: |
+          if [ -z "$JWT_SECRET" ]; then
+            echo "JWT_SECRET=$(openssl rand -base64 32)" >> "$GITHUB_ENV"
+          fi
+
+      - name: Build
+        run: ./mvnw verify
+
+      - name: SAST (SpotBugs)
+        run: ./mvnw spotbugs:check -DskipTests
+
+      - name: SCA (OWASP Dependency-Check)
+        run: ./mvnw dependency-check:check -DskipTests
+
+      - name: Upload SCA report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependency-check-report
+          path: |
+            target/dependency-check-report.html
+            target/dependency-check-report.json
+          if-no-files-found: warn

@@ -29,23 +29,19 @@ public class AppUser {
 
     public AppUser(String username, byte[] salt, byte[] passwordHash) {
         this.username = username;
-        this.salt = salt;
-        this.passwordHash = passwordHash;
+        this.salt = salt.clone();
+        this.passwordHash = passwordHash.clone();
     }
 
     public String getUsername() {
         return username;
     }
 
-    public byte[] getSalt() {
-        return salt;
-    }
-
     public byte[] getPasswordHash() {
-        return passwordHash;
+        return passwordHash.clone();
     }
 
     public void setPasswordHash(byte[] passwordHash) {
-        this.passwordHash = passwordHash;
+        this.passwordHash = passwordHash.clone();
     }
 }
