@@ -54,6 +54,14 @@ jobs:
       - name: SAST (SpotBugs)
         run: ./mvnw spotbugs:check -DskipTests
 
+      - name: Cache OWASP Dependency-Check database
+        uses: actions/cache@v4
+        with:
+          path: ~/.dependency-check-data
+          key: dependency-check-${{ runner.os }}-${{ hashFiles('pom.xml') }}
+          restore-keys: |
+            dependency-check-${{ runner.os }}-
+
       - name: SCA (OWASP Dependency-Check)
         run: ./mvnw dependency-check:check -DskipTests
 
